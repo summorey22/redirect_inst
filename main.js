@@ -1,7 +1,12 @@
-const d = new Date();
+var serverTime = new Date();
+var serverOffset = serverTime.getTimezoneOffset();
+var userOffset = 330;   // IST offset UTC +5:30 
+var userTime = new Date(serverTime.getTime() + (userOffset + serverOffset)*60000);
 
-let day = d.getDay();
-let time = d.getHours();
+// ISTTime now represents the time in IST coordinates
+
+var day = userTime.getDay();
+var time = userTime.getHours();
 
 var TimeTable = {
      
