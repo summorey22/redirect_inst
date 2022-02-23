@@ -48,6 +48,11 @@ var TimeTable = {
 
 var link = TimeTable[day][0][time];
 
-if(link != null){
-    window.location.replace(TimeTable[day][0][time]);
+if(link != undefined){
+    setTimeout(function(){
+        window.location.replace(TimeTable[day][0][time]);
+    }, 1000);
+    
+}else{
+    window.location.replace("nolecture.html");
 }
