@@ -40,8 +40,8 @@ var TimeTable = {
 
     5:[{
         9:"https://meet.google.com/xct-vaqg-nxk",
-        10:"http://meet.google.com/dex-bqvg-yib",
-        11:"https://meet.google.com/upg-xcny-emk",
+        10:"https://meet.google.com/upg-xcny-emk",
+        11:"http://meet.google.com/dex-bqvg-yib",
         13:"https://meet.google.com/upg-xcny-emk"}],
 
     }; 
