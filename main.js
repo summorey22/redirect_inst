@@ -26,22 +26,22 @@ var TimeTable = {
         11:"https://meet.google.com/upg-xcny-emk", 
         14:"http://meet.google.com/dex-bqvg-yib"}], 
         
-    3:[{
+    3: [{
         10:"https://meet.google.com/toi-rmqs-yis",
         12:"http://meet.google.com/dex-bqvg-yib",
         13:"https://meet.google.com/hmo-yfzw-nyn"}],
     
-    4:[{
+    4: [{
         9:"https://meet.google.com/xct-vaqg-nxk",
         10:"http://meet.google.com/dex-bqvg-yib",
         11:"https://meet.google.com/toi-rmqs-yis",
         13:"https://meet.google.com/soj-kvpq-ath",
         14:"https://meet.google.com/uhj-ftyb-nno"}],
 
-    5:[{
+    5: [{
         9:"https://meet.google.com/xct-vaqg-nxk",
-        10:"https://meet.google.com/upg-xcny-emk",
-        11:"http://meet.google.com/dex-bqvg-yib",
+        10:"http://meet.google.com/dex-bqvg-yib",
+        11:"https://meet.google.com/upg-xcny-emk",
         13:"https://meet.google.com/upg-xcny-emk"}],
 
     }; 
@@ -50,7 +50,7 @@ var link = TimeTable[day][0][time];
 
 if(link != undefined){
     setTimeout(function(){
-        window.location.replace(TimeTable[day][0][time]);
+        window.location.replace(link);
     }, 1000);
     
 }else{
