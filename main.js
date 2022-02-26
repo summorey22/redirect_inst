@@ -1,58 +1,35 @@
-var serverTime = new Date();
-var serverOffset = serverTime.getTimezoneOffset();
-var userOffset = 330;   // IST offset UTC +5:30 
-var userTime = new Date(serverTime.getTime() + (userOffset + serverOffset)*60000);
+const rules = [
+    { day: 1, from: 10, to: 12, url: 'https://meet.google.com/toi-rmqs-yis' },
+    { day: 1, from: 12, to: 14, url: 'https://meet.google.com/soj-kvpq-ath' },
+    { day: 1, from: 14, to: 16, url: 'https://meet.google.com/ffv-hrpb-cab' },
+    { day: 1, from: 16, to: 18, url: 'https://meet.google.com/wec-qmtt-kys' },
+    { day: 2, from: 9,  to: 10, url: 'https://meet.google.com/xct-vaqg-nxk' },
+    { day: 2, from: 10, to: 11, url: 'https://meet.google.com/toi-rmqs-yis' },
+    { day: 2, from: 11, to: 12, url: 'https://meet.google.com/upg-xcny-emk' },
+    { day: 2, from: 14, to: 15, url: 'https://meet.google.com/dex-bqvg-yib' },
+    { day: 3, from: 10, to: 11, url: 'https://meet.google.com/toi-rmqs-yis' },
+    { day: 3, from: 10, to: 11, url: 'https://meet.google.com/dex-bqvg-yib' },
+    { day: 3, from: 11, to: 12, url: 'https://meet.google.com/hmo-yfzw-nyn' },
+    { day: 4, from: 9,  to: 10, url: 'https://meet.google.com/xct-vaqg-nxk' },
+    { day: 4, from: 10, to: 11, url: 'https://meet.google.com/dex-bqvg-yib' },
+    { day: 4, from: 11, to: 12, url: 'https://meet.google.com/toi-rmqs-yis' },
+    { day: 4, from: 14, to: 15, url: 'https://meet.google.com/soj-kvpq-ath' },
+    { day: 4, from: 14, to: 15, url: 'https://meet.google.com/uhj-ftyb-nno' },
+    { day: 5, from: 9,  to: 10, url: 'https://meet.google.com/xct-vaqg-nxk' },
+    { day: 5, from: 10, to: 11, url: 'https://meet.google.com/dex-bqvg-yib' },
+    { day: 5, from: 11, to: 12, url: 'https://meet.google.com/upg-xcny-emk' },
+    { day: 5, from: 14, to: 15, url: 'https://meet.google.com/upg-xcny-emk' },
+    { url: './nolecture.html' }
+];
 
-// ISTTime now represents the time in IST coordinates
+function getRedirectUrl() {
+    const now = new Date();
+    const today = now.getDay();
+    const hours = now.getHours();
 
-var day = userTime.getDay();
-var time = userTime.getHours();
-
-var TimeTable = {
-     
-    1: [{ 
-        10: "https://meet.google.com/toi-rmqs-yis", 
-        11: "https://meet.google.com/toi-rmqs-yis", 
-        12: "https://meet.google.com/soj-kvpq-ath", 
-        13: "https://meet.google.com/soj-kvpq-ath", 
-        14: "https://meet.google.com/ffv-hrpb-cab", 
-        15: "https://meet.google.com/ffv-hrpb-cab", 
-        16: "https://meet.google.com/wec-qmtt-kys", 
-        17: "https://meet.google.com/wec-qmtt-kys" }], 
+    const first = rules.find(item => (item.day === undefined || item.day === today) && (item.from === undefined || item.from <= hours) && (item.to === undefined || item.to > hours));
     
-    2: [{
-        9:"https://meet.google.com/xct-vaqg-nxk", 
-        10:"https://meet.google.com/toi-rmqs-yis", 
-        11:"https://meet.google.com/upg-xcny-emk", 
-        14:"http://meet.google.com/dex-bqvg-yib"}], 
-        
-    3: [{
-        10:"https://meet.google.com/toi-rmqs-yis",
-        12:"http://meet.google.com/dex-bqvg-yib",
-        13:"https://meet.google.com/hmo-yfzw-nyn"}],
-    
-    4: [{
-        9:"https://meet.google.com/xct-vaqg-nxk",
-        10:"http://meet.google.com/dex-bqvg-yib",
-        11:"https://meet.google.com/toi-rmqs-yis",
-        13:"https://meet.google.com/soj-kvpq-ath",
-        14:"https://meet.google.com/uhj-ftyb-nno"}],
-
-    5: [{
-        9:"https://meet.google.com/xct-vaqg-nxk",
-        10:"http://meet.google.com/dex-bqvg-yib",
-        11:"https://meet.google.com/upg-xcny-emk",
-        13:"https://meet.google.com/upg-xcny-emk"}],
-
-    }; 
-
-var link = TimeTable[day][0][time];
-
-if(link != undefined){
-    setTimeout(function(){
-        window.location.replace(link);
-    }, 1000);
-    
-}else{
-    window.location.replace("nolecture.html");
+    return first.url;
 }
+
+window.location.href = getRedirectUrl();
