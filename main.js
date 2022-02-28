@@ -33,4 +33,4 @@ function getRedirectUrl() {
 }
 
 window.location.href = getRedirectUrl();
-//1
+//1/
