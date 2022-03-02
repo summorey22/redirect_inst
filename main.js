@@ -32,5 +32,5 @@ function getRedirectUrl() {
     return first.url;
 }
 
-window.location.replace = getRedirectUrl();
+window.location.href = getRedirectUrl();
 //1/
