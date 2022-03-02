@@ -8,8 +8,8 @@ const rules = [
     { day: 2, from: 11, to: 12, url: 'https://meet.google.com/upg-xcny-emk' },
     { day: 2, from: 14, to: 15, url: 'https://meet.google.com/dex-bqvg-yib' },
     { day: 3, from: 10, to: 11, url: 'https://meet.google.com/toi-rmqs-yis' },
-    { day: 3, from: 10, to: 11, url: 'https://meet.google.com/dex-bqvg-yib' },
-    { day: 3, from: 11, to: 12, url: 'https://meet.google.com/hmo-yfzw-nyn' },
+    { day: 3, from: 12, to: 13, url: 'https://meet.google.com/dex-bqvg-yib' },
+    { day: 3, from: 13, to: 14, url: 'https://meet.google.com/hmo-yfzw-nyn' },
     { day: 4, from: 9,  to: 10, url: 'https://meet.google.com/xct-vaqg-nxk' },
     { day: 4, from: 10, to: 11, url: 'https://meet.google.com/dex-bqvg-yib' },
     { day: 4, from: 11, to: 12, url: 'https://meet.google.com/toi-rmqs-yis' },
@@ -32,5 +32,5 @@ function getRedirectUrl() {
     return first.url;
 }
 
-window.location.href = getRedirectUrl();
+window.location.replace = getRedirectUrl();
 //1/
