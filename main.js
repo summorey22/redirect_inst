@@ -20,7 +20,7 @@ const rules = [
     { day: 5, from: 11, to: 12, url: 'https://meet.google.com/upg-xcny-emk' },
     { day: 5, from: 14, to: 15, url: 'https://meet.google.com/upg-xcny-emk' },
     { url: './nolecture.html' }
-];//
+];///add
 
 function getRedirectUrl() {
     const now = new Date();
