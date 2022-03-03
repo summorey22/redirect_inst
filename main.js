@@ -13,7 +13,7 @@ const rules = [
     { day: 4, from: 9,  to: 10, url: 'https://meet.google.com/xct-vaqg-nxk' },
     { day: 4, from: 10, to: 11, url: 'https://meet.google.com/dex-bqvg-yib' },
     { day: 4, from: 11, to: 12, url: 'https://meet.google.com/toi-rmqs-yis' },
-    { day: 4, from: 14, to: 15, url: 'https://meet.google.com/soj-kvpq-ath' },
+    { day: 4, from: 13, to: 14, url: 'https://meet.google.com/soj-kvpq-ath' },
     { day: 4, from: 14, to: 15, url: 'https://meet.google.com/uhj-ftyb-nno' },
     { day: 5, from: 9,  to: 10, url: 'https://meet.google.com/xct-vaqg-nxk' },
     { day: 5, from: 10, to: 11, url: 'https://meet.google.com/dex-bqvg-yib' },
