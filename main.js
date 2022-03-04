@@ -18,7 +18,7 @@ const rules = [
     { day: 5, from: 9,  to: 10, url: 'https://meet.google.com/xct-vaqg-nxk' },
     { day: 5, from: 10, to: 11, url: 'https://meet.google.com/dex-bqvg-yib' },
     { day: 5, from: 11, to: 12, url: 'https://meet.google.com/upg-xcny-emk' },
-    { day: 5, from: 14, to: 15, url: 'https://meet.google.com/upg-xcny-emk' },
+    { day: 5, from: 13, to: 14, url: 'https://meet.google.com/upg-xcny-emk' },
     { url: './nolecture.html' }
 ];///add/
 
